@@ -6,7 +6,7 @@ namespace MONOPOLY
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
