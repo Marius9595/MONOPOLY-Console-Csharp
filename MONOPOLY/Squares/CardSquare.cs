@@ -94,7 +94,7 @@ namespace MONOPOLY
 
                 default:
 
-                    return "HAY UN ERROR";
+                    return "THERE IS A BIG PROBLEM";
                     break;
 
             }
