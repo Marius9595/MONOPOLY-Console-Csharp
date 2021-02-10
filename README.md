@@ -29,6 +29,10 @@ This is a classic game where there are among 2-8 players that try to avoid the b
 * Money (1500 m.u for each player in the beggining)
 * 32 houses and 12 hotels
 
+### Board
+
+(https://github.com/Marius9595/board.JPG)
+
 ------
 ## Rules of the game (official)
 
