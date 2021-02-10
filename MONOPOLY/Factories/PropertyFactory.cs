@@ -6,24 +6,31 @@ namespace MONOPOLY
 {
     class PropertyFactory:SquareFactory
     {
-        public string name;
-        public double buying_cost; 
-        public double paymenttoOwner; 
+        private string Name;
+        private double Buying_cost;
+        private double PaymenttoOwner;
+        private double buldingCost;
+        private double mortgageValue;
+        private ColorProperty color;
 
-        public int position;
-
-        public PropertyFactory(string Name, long Buying_cost, long PaymenttoOwner,
-            TitleDeedSituation Situation, Player Owner) {
-
-            this.name = Name;
-            this.buying_cost = Buying_cost;
-            this.paymenttoOwner = PaymenttoOwner;
-
+        public PropertyFactory() {
 
         }
-        public override AbstractSquare GetSquare( int position)
+
+        public  void  Re_AsignValuesFactory(string Name, double Buying_cost, double PaymenttoOwner, 
+            double buldingCost, double mortgageValue, ColorProperty color)
         {
-            return new PropertySquare( name,buying_cost,paymenttoOwner,position);
+            this.Name = Name;
+            this.Buying_cost=Buying_cost;
+            this.PaymenttoOwner=PaymenttoOwner;
+            this.buldingCost = buldingCost;
+            this.mortgageValue = mortgageValue;
+            this.color = color;
+        }
+
+        public override AbstractSquare GetSquare(int position)
+        {
+            return new PropertySquare(Name, Buying_cost, PaymenttoOwner,buldingCost,mortgageValue,color, position);
         }
     }
 }

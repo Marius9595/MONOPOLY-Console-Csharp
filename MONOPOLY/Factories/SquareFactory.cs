@@ -6,6 +6,6 @@ namespace MONOPOLY
 {
     abstract class SquareFactory
     {
-        public abstract  AbstractSquare GetSquare(int position);
+        public abstract AbstractSquare GetSquare(int position);
     }
 }

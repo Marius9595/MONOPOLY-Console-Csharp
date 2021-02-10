@@ -7,6 +7,13 @@ namespace MONOPOLY
     class HouseDecorator : PropertyDecorator
     {
 
-        public HouseDecorator(IAbstractProperty AbstractProperty,Player play) : base(AbstractProperty, play) { }
+        public HouseDecorator(IAbstractProperty AbstractProperty) : base(AbstractProperty) { }
+
+
+        public void Hola()
+        {
+
+            Console.WriteLine("hola, tenog una casa");
+        }
     }
 }

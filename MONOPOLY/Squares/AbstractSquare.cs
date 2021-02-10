@@ -15,7 +15,8 @@ namespace MONOPOLY
             this.position = Position;
         }
 
-        public AbstractSquare() { }
+
+        abstract public string InfoSquare();
 
 
 

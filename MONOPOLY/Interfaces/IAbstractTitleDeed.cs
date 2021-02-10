@@ -9,9 +9,10 @@ namespace MONOPOLY
     {
 
         public void AssignOwner() {}
-        public string NAME { get;}
+        public string NAME {get;}
         public double BUYING_COST { get;}
         public double PAYTOOWNER { get ;}
+        public double MORTGAGE_VALUE { get; }
         public TitleDeedSituation SITUATION { get;}
         
     }

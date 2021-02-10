@@ -13,11 +13,15 @@ namespace MONOPOLY
         private double buying_cost;
         private double paymenttoOwner;
         private TitleDeedSituation situation;
+        private double mortgageValue;
+        private Player owner;
 
-        public string NAME => name;
+        public string NAME {get => name; }
         public double BUYING_COST => buying_cost;
         public double PAYTOOWNER => paymenttoOwner;
         public TitleDeedSituation SITUATION => situation;
+
+        public double MORTGAGE_VALUE => mortgageValue;
 
         public ServicesSquare(string Name, double Buying_cost, double paymenttoOwner, int position) : base(position)
         {
@@ -36,6 +40,13 @@ namespace MONOPOLY
                 "\n\tSituation: " + situation.ToString();
         }
 
+        public override string InfoSquare()
+        {
+
+            if (owner != null) return $"You are in {name}, it is {situation} and costs {buying_cost}";
+            else return $"you are in a station that belongs to {owner} and if you are not him, you have to pay him {paymenttoOwner}";
+
+        }
     }
 
 }

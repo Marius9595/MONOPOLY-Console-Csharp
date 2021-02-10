@@ -9,7 +9,7 @@ namespace MONOPOLY
 
     class CardSquare : AbstractSquare
     {
-        private int content;
+        private int content;                                                   
         private int rand_steps;
         private int rand_cash;
         private TypeofCard typeofCard;
@@ -101,6 +101,9 @@ namespace MONOPOLY
 
         }
 
-        
+        public override string InfoSquare()
+        {
+            return $"You are on special square, you have to take one {typeofCard} card, GOOD LUCK!";
+        }
     }
 }
