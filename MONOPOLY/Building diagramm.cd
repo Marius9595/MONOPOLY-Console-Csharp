@@ -1,165 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="MONOPOLY.AbstractSquare" Collapsed="true">
-    <Position X="3.25" Y="1.75" Width="1.5" />
+    <Position X="13.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAABIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\AbstractSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.CardSquare" Collapsed="true">
-    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Position X="10.5" Y="6.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Enum Name="MONOPOLY.CardSquare.Chances" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Squares\CardSquare.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-      <Enum Name="MONOPOLY.CardSquare.Community" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Squares\CardSquare.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>ABACAAAECAAAAAAAQAQAAEAEAAAAAAAAAKAAAAAAAAA=</HashCode>
+      <HashCode>ABACAAAECAAAAAAAQAQBAEAEAAAAAAAAAKAAAAAAAAA=</HashCode>
       <FileName>Squares\CardSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.Squares.JailSquare" Collapsed="true">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Position X="12.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\JailSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.Squares.NeutralSquare" Collapsed="true">
-    <Position X="4.25" Y="3.25" Width="1.5" />
+    <Position X="14.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\NeutralSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.PropertySquare" Collapsed="true">
-    <Position X="7.75" Y="3.25" Width="1.5" />
+    <Position X="17.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAQAAAABAAAIAABAAAIAAEAAAAAIAAIAAAAEA=</HashCode>
+      <HashCode>AAAYAAAAQAAAkBAAAIABBAAAIAAMAACAAIAAIAAAIEA=</HashCode>
       <FileName>Squares\PropertySquare.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="1.188" />
   </Class>
   <Class Name="MONOPOLY.ServicesSquare" Collapsed="true">
-    <Position X="6" Y="3.25" Width="1.5" />
+    <Position X="16" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAQAAAABAAAIAABAAAIAAEAAAAAIAAIAAAAEA=</HashCode>
+      <HashCode>AAAYAAAAQAAAgBAAAIABBAAAIAAEAAAAAIAAIAAAAEA=</HashCode>
       <FileName>Squares\ServicesSquare.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.21" />
   </Class>
   <Class Name="MONOPOLY.PropertyDecorator" Collapsed="true">
-    <Position X="10.5" Y="3.25" Width="1.5" />
+    <Position X="20.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\PropertyDecorator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MONOPOLY.HouseDecorator" Collapsed="true">
-    <Position X="9.75" Y="4.25" Width="1.5" />
+    <Position X="19.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\HouseDecorator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.HotelDecorator" Collapsed="true">
-    <Position X="11.5" Y="4.25" Width="1.5" />
+    <Position X="21.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\HotelDecorator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.SquareFactory" Collapsed="true">
-    <Position X="6.5" Y="9.25" Width="1.5" />
+    <Position X="13.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\SquareFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.ServicesFactory" Collapsed="true">
-    <Position X="8.75" Y="7.75" Width="1.5" />
+    <Position X="16" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQIAAAAAAAAAAIAAAAAAEAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQIAAAAAAAAAAAAAAAAAEAAAAAIAAAAIAAAA=</HashCode>
       <FileName>Factories\ServicesFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.PropertyFactory" Collapsed="true">
-    <Position X="10.5" Y="7.75" Width="1.5" />
+    <Position X="17.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQIAAAAAAAAAAIAAAAAAEAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>QAAIAAAAAIAAAAAAAIAAAAQAQAAIAACAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\PropertyFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.CardFactory" Collapsed="true">
-    <Position X="3.25" Y="7.75" Width="1.5" />
+    <Position X="10.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\CardFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.Factories.NeutralFactory" Collapsed="true">
-    <Position X="7" Y="7.75" Width="1.5" />
+    <Position X="14.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\NeutralFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.Factories.JailFactory" Collapsed="true">
-    <Position X="5" Y="7.75" Width="1.5" />
+    <Position X="12.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\JailFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="MONOPOLY.Board" Collapsed="true">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAYgAAAAAAAAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="board" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MONOPOLY.Player" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAkAAAAJACAAIAQAAAAAABAAAEAACAAAJAAAIAAEA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="properties" />
+    </ShowAsCollectionAssociation>
+  </Class>
   <Interface Name="MONOPOLY.IAbstractProperty" Collapsed="true">
-    <Position X="9.5" Y="2" Width="1.5" />
+    <Position X="19.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IAbstractProperty.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="MONOPOLY.IAbstractTitleDeed" Collapsed="true">
-    <Position X="6.5" Y="1.25" Width="2" />
+    <Position X="16.5" Y="4.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAIAAAAAAIAAAAAAAAAAAIAAAAEA=</HashCode>
+      <HashCode>AAAQAAAAAAAAABAAAIAAAAAAIAAAAAAAAAAAIAAAAEA=</HashCode>
       <FileName>Interfaces\IAbstractTitleDeed.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="MONOPOLY.TypeofCard" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="10.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\CardSquare.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="MONOPOLY.Squares.TypeNeutral" Collapsed="true">
-    <Position X="4.25" Y="4" Width="1.5" />
+    <Position X="14.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Squares\NeutralSquare.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="MONOPOLY.Type_Service" Collapsed="true">
-    <Position X="6" Y="4" Width="1.5" />
+    <Position X="16" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\ServicesSquare.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="MONOPOLY.TitleDeedSituation" Collapsed="true">
-    <Position X="6.75" Y="2" Width="1.5" />
+    <Position X="16.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
       <FileName>Interfaces\IAbstractTitleDeed.cs</FileName>

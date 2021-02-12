@@ -11,20 +11,26 @@ namespace MONOPOLY
         private int actualPosition = 0; 
         private double currentMoney = 1500; 
         private bool inJail = false; 
-        public List<PropertySquare> properties = new List<PropertySquare>(); 
+        public List<IAbstractTitleDeed> properties = new List<IAbstractTitleDeed>(); 
         private bool get_out_of_jail_card = false; // REVISAR
         private bool loser = false; //REVISAR
 
+        private ConsoleColor color;
+
+
+
+        public ConsoleColor COLOR { get => color;}
         public string NAME { get => name;}
-        public int ACTUALPOSITION { get => actualPosition; set => actualPosition = actualPosition + value; }
-        public double CURRENTMONEY { get => currentMoney; set => currentMoney = currentMoney+ value; }
+        public int ACTUALPOSITION { get => actualPosition; set => actualPosition=value ; }
+        public double CURRENTMONEY { get => currentMoney; set => currentMoney = value; }
         public bool INJAIL { get => inJail; set => inJail = value; }
         public bool GetOut { get => get_out_of_jail_card; set => get_out_of_jail_card = value; }
         public bool Loser { get => loser; set => loser = value; }
 
-        public Player(string Name)
+        public Player(string Name, ConsoleColor color)
         {
             this.name = Name;
+            this.color = color;
         }
 
         /*

@@ -74,6 +74,61 @@ namespace MONOPOLY
             board[12] = servicesFactory.GetSquare(12);
             propertyFactory.Re_AsignValuesFactory("States Avenue", 140, 10, 100, 70,ColorProperty.PINK);
             board[13] = propertyFactory.GetSquare(13);
+            propertyFactory.Re_AsignValuesFactory("Virginia Avenue", 160, 12, 100, 80, ColorProperty.PINK);
+            board[14] = propertyFactory.GetSquare(14);
+            servicesFactory.re_AsignValues("Pennsylvania Railroad", 200, 25);
+            board[15] = servicesFactory.GetSquare(15);
+            propertyFactory.Re_AsignValuesFactory("St. James Place", 180, 14, 100, 90, ColorProperty.ORANGE);
+            board[16] = propertyFactory.GetSquare(16);
+            board[17] = CommunityCardFactory.GetSquare(17);
+            propertyFactory.Re_AsignValuesFactory("Tennessee Avenue", 180, 14, 100, 90, ColorProperty.ORANGE);
+            board[18] = propertyFactory.GetSquare(18);
+            propertyFactory.Re_AsignValuesFactory("New York Avenue", 200, 16, 100, 100, ColorProperty.ORANGE);
+            board[19] = propertyFactory.GetSquare(19);
+            board[20] = neutralFactory.GetSquare(20);
+            propertyFactory.Re_AsignValuesFactory("Kentucky Avenue", 220, 18, 150, 110, ColorProperty.RED);
+            board[21] = propertyFactory.GetSquare(21);
+            board[22] = ChanceCardFactory.GetSquare(22);
+            propertyFactory.Re_AsignValuesFactory("Indiana Avenue", 220, 18, 150, 110, ColorProperty.RED);
+            board[23] = propertyFactory.GetSquare(23);
+            propertyFactory.Re_AsignValuesFactory("Illinois Avenue", 240, 20, 150, 120, ColorProperty.RED);
+            board[24] = propertyFactory.GetSquare(24);
+            servicesFactory.re_AsignValues("B. & O. Railroad", 200, 25);
+            board[25] = servicesFactory.GetSquare(25);
+            propertyFactory.Re_AsignValuesFactory("Atlantic Avenue", 260, 22, 150, 130, ColorProperty.YELLOW);
+            board[26] = propertyFactory.GetSquare(26);
+            propertyFactory.Re_AsignValuesFactory("Ventnor Avenue", 260, 22, 150, 130, ColorProperty.YELLOW);
+            board[27] = propertyFactory.GetSquare(27);
+            servicesFactory.re_AsignValues("Water Works", 150, 4);
+            board[28] = servicesFactory.GetSquare(28);
+            propertyFactory.Re_AsignValuesFactory("Marvin Gardens", 280, 24, 150, 140, ColorProperty.YELLOW);
+            board[29] = propertyFactory.GetSquare(29);
+            board[30] = JailFactory.GetSquare(30);
+            propertyFactory.Re_AsignValuesFactory("Pacific Avenue", 300, 26, 200, 150, ColorProperty.GREEN);
+            board[31] = propertyFactory.GetSquare(31);
+            propertyFactory.Re_AsignValuesFactory("North Carolina Avenue", 300, 26, 200, 150, ColorProperty.GREEN);
+            board[32] = propertyFactory.GetSquare(32);
+            board[33] = CommunityCardFactory.GetSquare(33);
+            propertyFactory.Re_AsignValuesFactory("Pennsylvania Avenue", 320, 28, 200, 160, ColorProperty.GREEN);
+            board[34] = propertyFactory.GetSquare(34);
+            servicesFactory.re_AsignValues("Short Line", 200, 25);
+            board[35] = propertyFactory.GetSquare(35);
+            board[36] = ChanceCardFactory.GetSquare(36);
+            propertyFactory.Re_AsignValuesFactory("Park Place", 350, 35, 200, 175, ColorProperty.PURPLE);
+            board[37] = propertyFactory.GetSquare(37);
+            board[38] = neutralFactory.GetSquare(38);
+            propertyFactory.Re_AsignValuesFactory("Boardwalk", 400, 50, 200, 200, ColorProperty.PURPLE);
+            board[39] = propertyFactory.GetSquare(39);
+
+
+
+            //mirar decorador
+            //mirar mortagage de servicios
+
+
+
+
+
             
 
 
@@ -84,4 +139,4 @@ namespace MONOPOLY
 
     }
 }
-}
+
