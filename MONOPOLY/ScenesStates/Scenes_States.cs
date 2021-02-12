@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    abstract class ScenesStates
+   abstract class Scenes_States
     {
         protected Scenes scenes;
 

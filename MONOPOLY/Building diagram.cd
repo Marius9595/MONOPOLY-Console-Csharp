@@ -17,14 +17,14 @@
       <FileName>Squares\CardSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MONOPOLY.Squares.JailSquare" Collapsed="true">
+  <Class Name="MONOPOLY.JailSquare" Collapsed="true">
     <Position X="12.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Squares\JailSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MONOPOLY.Squares.NeutralSquare" Collapsed="true">
+  <Class Name="MONOPOLY.NeutralSquare" Collapsed="true">
     <Position X="14.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -50,20 +50,20 @@
   <Class Name="MONOPOLY.PropertyDecorator" Collapsed="true">
     <Position X="20.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\PropertyDecorator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MONOPOLY.HouseDecorator" Collapsed="true">
-    <Position X="19.75" Y="7.5" Width="1.5" />
+    <Position X="19.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\HouseDecorator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.HotelDecorator" Collapsed="true">
-    <Position X="21.5" Y="7.5" Width="1.5" />
+    <Position X="21.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Decorators\PropertyDecorators\HotelDecorator.cs</FileName>
@@ -97,14 +97,14 @@
       <FileName>Factories\CardFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MONOPOLY.Factories.NeutralFactory" Collapsed="true">
+  <Class Name="MONOPOLY.NeutralFactory" Collapsed="true">
     <Position X="14.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Factories\NeutralFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MONOPOLY.Factories.JailFactory" Collapsed="true">
+  <Class Name="MONOPOLY.JailFactory" Collapsed="true">
     <Position X="12.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -152,7 +152,7 @@
       <FileName>Squares\CardSquare.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="MONOPOLY.Squares.TypeNeutral" Collapsed="true">
+  <Enum Name="MONOPOLY.TypeNeutral" Collapsed="true">
     <Position X="14.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAACAA=</HashCode>

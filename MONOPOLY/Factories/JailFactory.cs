@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MONOPOLY.Factories
+namespace MONOPOLY
 {
     class JailFactory : SquareFactory
     {
         public override AbstractSquare GetSquare(int position)
         {
-            return new Squares.JailSquare(position);
+            return new JailSquare(position);
         }
     }
 }

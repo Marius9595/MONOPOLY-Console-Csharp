@@ -6,14 +6,14 @@ namespace MONOPOLY
 {
      class Scenes
     {
-        private ScenesStates state;
+        private Scenes_States state;
 
-        public Scenes(ScenesStates state)
+        public Scenes(Scenes_States state)
         {
             this.TransitionTo(state);
         }
 
-        public void TransitionTo(ScenesStates state)
+        public void TransitionTo(Scenes_States state)
         {
             this.state = state;
             this.state.SetScene(this);

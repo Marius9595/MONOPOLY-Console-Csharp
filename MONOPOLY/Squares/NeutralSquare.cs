@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MONOPOLY.Squares
+namespace MONOPOLY
 {
     public enum TypeNeutral {VisitingJail,FreeAutoParking,StartSquare}
     class NeutralSquare: AbstractSquare

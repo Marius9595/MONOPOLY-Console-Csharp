@@ -12,9 +12,9 @@ namespace MONOPOLY
         private string name;
         private double buying_cost;
         private double paymenttoOwner;
-        private TitleDeedSituation situation;
         private double mortgageValue;
         private Player owner;
+        private TitleDeedSituation situation;
 
         public string NAME {get => name; }
         public double BUYING_COST => buying_cost;

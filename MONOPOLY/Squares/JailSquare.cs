@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MONOPOLY.Squares
+namespace MONOPOLY
 {
     class JailSquare: AbstractSquare
     {      

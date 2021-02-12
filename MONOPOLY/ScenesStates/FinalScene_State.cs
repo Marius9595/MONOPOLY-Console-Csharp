@@ -4,27 +4,26 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    class GameOverSceneState : ScenesStates
+    class FinalScene_State : Scenes_States
     {
         public override void Draw(Player[] players, Board board)
         {
-
             config.init();
 
             String finish = "Press Any Button to FINISH";
-            String Welcome="";
+            String Welcome = "";
 
             for (int i = 0; i < players.Length; i++)
             {
-                if (players[i].Loser == false) 
-                { 
-                    Welcome = $"THE WINNER IS {players[0].NAME.ToUpper()}"; 
+                if (players[i].Loser == false)
+                {
+                    Welcome = $"THE WINNER IS {players[0].NAME.ToUpper()}";
                 }
 
             }
 
 
-            for (int i = 0; i < config.HEIGHT / 6; i++)  Console.WriteLine();
+            for (int i = 0; i < config.HEIGHT / 6; i++) Console.WriteLine();
             Console.BackgroundColor = ConsoleColor.Magenta;
 
             for (int i = 0; i < config.HEIGHT / 5; i++) writeEspecialLine();

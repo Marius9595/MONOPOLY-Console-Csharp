@@ -1,30 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="PATRÓN STATES">
-    <Position X="6.317" Y="0.608" Height="0.342" Width="1.092" />
+  <Comment CommentText="State Pattern">
+    <Position X="9.317" Y="0.942" Height="0.366" Width="1.083" />
   </Comment>
-  <Class Name="MONOPOLY.Scenes">
-    <Position X="1.25" Y="2" Width="1.5" />
+  <Class Name="MONOPOLY.Scenes" Collapsed="true">
+    <Position X="3.25" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAABEAAAAAAAAAAA=</HashCode>
       <FileName>ScenesStates\Scenes.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MONOPOLY.ScenesStates">
-    <Position X="6.25" Y="2" Width="1.5" />
+  <Class Name="MONOPOLY.Scenes_States">
+    <Position X="6.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAIAAAAAAAAAAAACAAAAAAAA=</HashCode>
-      <FileName>ScenesStates\ScenesStates.cs</FileName>
+      <FileName>ScenesStates\Scenes_States.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="scenes" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="MONOPOLY.startSceneState">
-    <Position X="4.25" Y="4.75" Width="1.5" />
+  <Class Name="MONOPOLY.StartScene_State" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScenesStates\startScene_State.cs</FileName>
+      <NewMemberFileName>ScenesStates\StartScene_State.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.FinalScene_State" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ScenesStates\startSceneState.cs</FileName>
+      <FileName>ScenesStates\FinalScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.PlayerScene_State" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScenesStates\PlayerScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -6,7 +6,6 @@ namespace MONOPOLY
 {
      abstract class PropertyDecorator:IAbstractProperty
     {
-        protected IAbstractProperty AbstractProperty;
         public PropertyDecorator(IAbstractProperty IAbstractProperty)
         {
             

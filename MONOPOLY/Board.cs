@@ -39,12 +39,12 @@ namespace MONOPOLY
             CardFactory ChanceCardFactory = new CardFactory(TypeofCard.Chance);
             CardFactory CommunityCardFactory = new CardFactory(TypeofCard.Community);
 
-            Factories.JailFactory JailFactory = new Factories.JailFactory();
-            Factories.NeutralFactory neutralFactory = new Factories.NeutralFactory();
+            JailFactory JailFactory = new JailFactory();
+            NeutralFactory neutralFactory = new NeutralFactory();
 
             PropertyFactory propertyFactory = new PropertyFactory();
 
-            Factories.IncomeTaxFactory incomeTaxFactory = new Factories.IncomeTaxFactory();
+            IncomeTaxFactory incomeTaxFactory = new IncomeTaxFactory();
 
             ServicesFactory servicesFactory = new ServicesFactory();
 
