@@ -8,9 +8,31 @@ namespace MONOPOLY
     {
         static void Main(string[] args)
         {
-            
 
-            Console.WriteLine(Console.Title);
+            Game juego = new Game();
+
+            juego.Create();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             /* COMO FUNCIONA EL MOVIMIENTO

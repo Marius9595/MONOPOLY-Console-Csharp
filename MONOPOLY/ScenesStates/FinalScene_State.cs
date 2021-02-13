@@ -6,14 +6,14 @@ namespace MONOPOLY
 {
     class FinalScene_State : Scenes_States
     {
-        public override void Draw(Player[] players, Board board)
+        public override void Draw(List<Player> players, Board board)
         {
             config.init();
 
             String finish = "Press Any Button to FINISH";
             String Welcome = "";
 
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 if (players[i].Loser == false)
                 {
