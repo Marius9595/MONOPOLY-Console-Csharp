@@ -26,49 +26,6 @@ namespace MONOPOLY
 
             Scenes.Display(players, board_game);
 
-            /*
-
-            //TODO: QUITAR DE AQUI, SOLO PARA PROBAR
-
-            Player mario = new Player("mario", ConsoleColor.White);
-
-            mario.SetScene(new RollingDicesScene_State());
-
-            mario.Display();
-
-            mario.MovePlayer();
-
-            //acciones
-            Console.WriteLine("me he estoy moviendo");
-            System.Threading.Thread.Sleep(2500);
-
-            if (mario.DOUBLEBOOL==true && mario.INJAIL == false)
-            {
-                mario.Display();
-
-                if (mario.INJAIL == true)
-                {
-                    mario.Display();
-
-                    Console.WriteLine("Las has cagado");
-
-                    mario.SetScene(new GotoJailScene_State());
-
-                    mario.Display();
-
-                    // TODO: fin de turno, establecer ruptura
-                }
-                else
-                {
-                    mario.MovePlayer();
-                }
-            }
-            System.Threading.Thread.Sleep(2500);
-            // accciones
-
-
-
-            */
 
         }
         
@@ -104,48 +61,34 @@ namespace MONOPOLY
                     // aqui abra que poner un if para  que jueguen los que estan en la carcel
 
                     players[Player_Index].SetScene(new RollingDicesScene_State());
-
                     players[Player_Index].Display();
-
                     players[Player_Index].MovePlayer();
-
-                    //acciones
-                    Console.WriteLine("me he estoy moviendo");
-                    System.Threading.Thread.Sleep(2500);
+                    System.Threading.Thread.Sleep(2000);
 
 
-                    Scenes.TransitionTo(new BoardSituationScene_State());
-
-                    List<Player> playerSituaion = new List<Player>();
-                    playerSituaion.Add(players[Player_Index]);
-
-                    Scenes.Display(playerSituaion, board_game);
-
-                    playerSituaion.Remove(players[Player_Index]);
-
-                    Console.ReadLine();
+                    PlayerActions(players[Player_Index], board_game);
 
 
                     if (players[Player_Index].DOUBLEBOOL == true && players[Player_Index].INJAIL == false)
                     {
+                        players[Player_Index].SetScene(new RollingDicesScene_State());
                         players[Player_Index].Display();
 
                         if (players[Player_Index].INJAIL == true)
                         {
-                            players[Player_Index].Display();
-
-                            Console.WriteLine("La has cagado"); //improve this
-                            System.Threading.Thread.Sleep(1500);
+                            Console.Clear();
 
                             players[Player_Index].SetScene(new GotoJailScene_State());
                             players[Player_Index].Display();
+                            players[Player_Index].INJAIL = true;
                         }
                         else
                         {
                             players[Player_Index].MovePlayer();
+                            PlayerActions(players[Player_Index], board_game);
                         }
                     }
-                    System.Threading.Thread.Sleep(2500);
+                    
 
 
 
@@ -158,7 +101,31 @@ namespace MONOPOLY
                     {
                         Player_Index++;
                     }
+                    System.Threading.Thread.Sleep(1000); // Transición?
                 }
+
+
+                void PlayerActions(Player player , Board board)
+                {
+                    Console.WriteLine($"{player.NAME}, we are you locating in the next square");
+                    System.Threading.Thread.Sleep(2000);
+                    Console.Clear();
+
+                    Scenes.TransitionTo(new BoardSituationScene_State());
+
+                    List<Player> playerSituaion = new List<Player>();
+                    playerSituaion.Add(player);
+
+                    Scenes.Display(playerSituaion, board);
+
+                    playerSituaion.Remove(player);
+
+                    player.SetScene(new MenuPlayerScene_State());
+                    player.Display();
+
+                }
+
+
 
                 //TODO: Seguir con la Escena pos lnazamiento de dados
 
@@ -204,68 +171,7 @@ namespace MONOPOLY
             Console.ReadKey(true);
         }
 
-        public void DisplayMenu(Player player, int compt, bool pos)
-        {
-            Console.Clear();
-            if (pos)
-            {
-                DisplayPosition(player, compt);
-            }
-            int resp = 0;
-            Console.WriteLine("\nPlease Make a Selection :\n");
-            Console.WriteLine("0 : Game Status");
-            Console.WriteLine("1 : Finish Turn");
-            Console.WriteLine("2 : Your DashBoard");
-            Console.WriteLine("3 : Purchase the property");
-            Console.WriteLine("4 : Buy House for property");
-            Console.WriteLine("5 : Buy Hotel for property");
-            Console.WriteLine("6 : Declare Bankrupt");
-            Console.WriteLine("7 : Quit Game");
-            Console.Write("(1-7)>");
-            try
-            {
-                resp = int.Parse(Console.ReadLine());
-            }
-            catch (FormatException e)
-            {
-                this.DisplayMenu(player, compt, true);
-            }
 
-            switch (resp)
-            {
-                case 0:
-                    Console.WriteLine("Game Status :");
-                    for (int i = 0; i < players.Count; i++)
-                    {
-                        Console.WriteLine("\n" + players[i].toString());
-                    }
-                    Console.ReadKey();
-                    Console.Clear();
-                    DisplayMenu(player, compt, pos);
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    Dashboard(player, compt);
-                    break;
-                case 3:
-                    PurchaseProperty(player, compt);
-                    break;
-                case 4:
-                    BuyHouseProperty(player, compt);
-                    break;
-                case 5:
-                    BuyHotelProperty(player, compt);
-                    break;
-                case 6:
-                    player.loser = true;
-                    break;
-                case 7:
-                    player.money = 0;
-                    player.loser = true;
-                    break;
-            }
-        }
 
         public void DisplayPosition(Player player, int compt)
         {
@@ -528,87 +434,10 @@ namespace MONOPOLY
 
         public void PurchaseProperty(Player player, int compt)
         {
-            Property p = new Property("", Type_Property.Street, 0, 0, Property_Situation.Free, null, 0);
-            BoughtProperty bp = new BoughtProperty(p, null);
-            HouseProperty hsp = new HouseProperty(bp, null);
-            HotelProperty htp = new HotelProperty(hsp, null);
-            if (board_game.board[player.position].GetType() == bp.GetType() || board_game.board[player.position].GetType() == hsp.GetType() || board_game.board[player.position].GetType() == htp.GetType())
-            {
-                Console.WriteLine("This property is not available.");
-                Console.WriteLine("Press any key to go back to the menu.");
-                Console.ReadKey(true);
-                DisplayMenu(player, compt, false);
-            }
-            else if (board_game.board[player.position].GetType() == p.GetType())
-            {
-                Console.Clear();
-                Console.WriteLine("The property you want to buy is the following:\n");
-                p = (Property)board_game.board[player.position];
-                Console.WriteLine(p.toString());
-                if (p.buying_cost > player.money)
-                {
-                    Console.WriteLine("\nYou do not have enough money to go through with this purchase.");
-                    Console.WriteLine("Press any key to go back to the menu.");
-                    Console.ReadKey(true);
-                    DisplayMenu(player, compt, true);
-                }
-                else
-                {
-                    Console.WriteLine("\nYou currently have: $" + player.money);
-                    int res = 0;
-                    while (res != 1 && res != 2)
-                    {
-                        Console.WriteLine("Are you sure you want to go throught with this purchase?\n1 : YES\n2 : NO");
-                        res = int.Parse(Console.ReadLine());
-                    }
-                    if (res == 1)
-                    {
-                        Console.Clear();
-                        p = new BoughtProperty(p, player);
-                        BoughtProperty b = (BoughtProperty)p;
-                        board_game.board[player.position] = b;
-                        player.properties.Add(b);
-                        player.money -= p.buying_cost;
-                        Console.WriteLine("Congratulations on your new property!\n");
-                        Console.WriteLine(b.toStringOwner());
-                        Console.WriteLine("\nPress any key to go back to the menu.");
-                        Console.ReadKey(true);
-                        DisplayMenu(player, compt, true);
-                    }
-                    else if (res == 2)
-                    {
-                        Console.WriteLine("\nPress any key to go back to the menu.");
-                        Console.ReadKey(true);
-                        DisplayMenu(player, compt, true);
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("This square is not a property, you cannot purchase it.");
-                Console.WriteLine("\nPress any key to choose another action.\n");
-                Console.ReadKey(true);
-                DisplayMenu(player, compt, true);
-            }
+           
         }
 
-        public void Dashboard(Player player, int compt)
-        {
-            Console.Clear();
-            Console.WriteLine("Your position is: " + player.position);
-            Console.WriteLine("You have: $" + player.money);
-            Console.WriteLine("You own " + player.properties.Count() + " properties:\n");
-            if (player.properties.Count() != 0)
-            {
-                foreach (Property p in player.properties)
-                {
-                    Console.WriteLine(p.toString());
-                }
-            }
-            Console.WriteLine("\nPress any key to go back to the menu.");
-            Console.ReadKey(true);
-            DisplayMenu(player, compt, false);
-        }
+        
 
         public void BuyHouseProperty(Player player, int compt)
         {

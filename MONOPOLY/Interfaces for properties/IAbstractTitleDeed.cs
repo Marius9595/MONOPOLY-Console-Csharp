@@ -8,7 +8,7 @@ namespace MONOPOLY
     public interface IAbstractTitleDeed
     {
 
-        public void AssignOwner() {}
+        public void AssignOwner(Player player) {}
         public string NAME {get;}
         public double BUYING_COST { get;}
         public double PAYTOOWNER { get ;}

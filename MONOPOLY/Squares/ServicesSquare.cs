@@ -31,7 +31,10 @@ namespace MONOPOLY
             this.situation = TitleDeedSituation.Free;
         }
 
-        public void AssignOwner() { }
+        public void AssignOwner(Player player) {
+
+            this.owner = player;
+        }
 
 
         public string toString()

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    class Player 
+    public class Player 
     {
 
         private PlayerScenes_States Player_scene;
@@ -39,22 +39,22 @@ namespace MONOPOLY
             this.color = color;
         }
 
-        /*
+        
         public string toString()
         {
             int nb_prop = 0;
             if (properties != null)
             {
-                nb_prop = properties.Count();
+                nb_prop = properties.Count;
             }
             Console.WriteLine("Proprerties of : " + name);
             for (int i = 0; i < properties.Count; i++)
             {
-                Console.WriteLine(properties[i].toString());
+                Console.WriteLine(properties[i].NAME);
             }
-            return "Player: " + name + "\nPosition: " + position + "\nMoney: $" + money + "\nProperties: " + nb_prop;
+            return "Player: " + name + "\nPosition: " + actualPosition + "\nMoney: $" + currentMoney + "\nProperties: " + nb_prop;
         }
-        */
+       
 
 
 
