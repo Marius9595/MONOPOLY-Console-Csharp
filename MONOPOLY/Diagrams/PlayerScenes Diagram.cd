@@ -7,7 +7,7 @@
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAIAkAAAAJACCAAAQAABAQABAAAEAACAAALAAAIAAEA=</HashCode>
+      <HashCode>AAIAkAAAABACKAAAQAAAAQABAAAGAACEAALAAAIAAEA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -15,17 +15,24 @@
     <Position X="5.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAABAACAAAAAAAA=</HashCode>
-      <FileName>PlayerScenes_States.cs</FileName>
+      <FileName>PlayerScenes\PlayerScenes_States.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="player" />
     </ShowAsAssociation>
   </Class>
   <Class Name="MONOPOLY.RollingDicesScene_State" Collapsed="true">
-    <Position X="9" Y="0.5" Width="1.5" />
+    <Position X="10.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>RollingDicesScene_State.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAAAAABAAAAAIBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PlayerScenes\RollingDicesScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.GotoJailScene_State" Collapsed="true">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>GotoJailScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

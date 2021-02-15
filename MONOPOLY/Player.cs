@@ -17,8 +17,12 @@ namespace MONOPOLY
         private bool get_out_of_jail_card = false; // REVISAR
         private bool loser = false; //REVISAR
 
+        private int dices;
+        private Boolean doublebool;
         private ConsoleColor color;
 
+        public int DICES { get => dices; set => dices = value; }
+        public Boolean DOUBLEBOOL { get => doublebool; set => doublebool= value; }
 
 
         public ConsoleColor COLOR { get => color;}
@@ -52,38 +56,47 @@ namespace MONOPOLY
         }
         */
 
-        
 
-        
 
-        private bool DoubleBool(int[] dices)
+
+        public void DoubleBool(int[] dices)
         {
-            if (dices[0] == dices[1]) return true;
-
-            else return false;
-
-        }
-
-        public void Move(int[] dices)
-        {
-            if (DoubleBool(dices))
+            if (doublebool)
             {
-                int steps=0;
+                if (dices[0] == dices[1]) inJail = true;
 
-                for (int i = 0;  i< dices.Length; i++)
-                {
-
-                }
-
-                ACTUALPOSITION = 5;
+                else doublebool = false;
             }
             else
             {
-                actualPosition = actualPosition - 40;
-                currentMoney += 200;
+                if (dices[0] == dices[1]) doublebool = true;
             }
         }
 
+
+
+        public void MovePlayer()
+        {
+            int ControllerCount = 0;
+
+           if (this.ACTUALPOSITION + this.dices >=40)
+           {
+                ControllerCount = 40 - this.ACTUALPOSITION + this.dices;
+
+                this.ACTUALPOSITION = 0;
+
+                this.CURRENTMONEY += 200;
+
+                this.ACTUALPOSITION += ControllerCount;
+
+           } else
+           {
+             this.ACTUALPOSITION += this.dices;
+           }
+                
+
+            
+        }
 
 
         public void SetScene(PlayerScenes_States playerScene)

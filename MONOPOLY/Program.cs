@@ -63,7 +63,6 @@ namespace MONOPOLY
 
 
 
-
             /* COMO FUNCIONA EL MOVIMIENTO
             Board board = new Board();
 

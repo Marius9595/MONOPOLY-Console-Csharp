@@ -12,10 +12,13 @@ namespace MONOPOLY
             Console.WindowHeight = 40;
             Console.WindowWidth = 160;
 
-            int motion = 12;
+            int motion = 10;
+
+            Console.WriteLine();
 
             for (int i = 0; i < motion; i++)
             {
+               
                 Message();
                 System.Threading.Thread.Sleep(500);
                 Console.Clear();

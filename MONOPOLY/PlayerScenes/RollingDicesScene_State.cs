@@ -11,6 +11,8 @@ namespace MONOPOLY
         public override void Draw(Player player)
         {
             Console.Clear();
+            Transition();
+            Console.Clear();
 
             Console.BackgroundColor = player.COLOR;
             Console.ForegroundColor = player.COLOR;
@@ -30,10 +32,30 @@ namespace MONOPOLY
             Console.ReadKey(true);
 
 
-            int[] Dados = Dices.RollDices();
+            int[] dices = Dices.RollDices();
 
-            DisplayDices(Dados);
+            DisplayDices(dices);
+
+            player.DICES = DicesValue(dices);
+
+            player.DoubleBool(dices);
+
         }
+
+        int DicesValue(int[] dices)
+        {
+            int SumDices = 0;
+            for (int i = 0; i < dices.Length; i++)
+            {
+                SumDices = +dices[i];
+            }
+
+            return SumDices;
+        }
+
+
+
+
 
         private void DisplayDices(int[] dices)
         {
@@ -67,6 +89,21 @@ namespace MONOPOLY
 
             }
 
+
+        }
+
+
+        void Transition()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(".");
+                    System.Threading.Thread.Sleep(400);
+                }
+                Console.Clear();
+            }
 
         }
     }

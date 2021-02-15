@@ -26,7 +26,7 @@ namespace MONOPOLY
 
             Scenes.Display(players, board_game);
 
-            //QUITAR DE AQUI, SOLO PARA PROBAR
+            //TODO: QUITAR DE AQUI, SOLO PARA PROBAR
 
             Player mario = new Player("mario", ConsoleColor.White);
 
@@ -34,7 +34,39 @@ namespace MONOPOLY
 
             mario.Display();
 
-            
+            mario.MovePlayer();
+
+            //acciones
+            Console.WriteLine("me he estoy moviendo");
+            System.Threading.Thread.Sleep(2500);
+
+            if (mario.DOUBLEBOOL==true && mario.INJAIL == false)
+            {
+                mario.Display();
+
+                if (mario.INJAIL == true)
+                {
+                    mario.Display();
+
+                    Console.WriteLine("Las has cagado");
+
+                    mario.SetScene(new GotoJailScene_State());
+
+                    mario.Display();
+
+                    // TODO: fin de turno, establecer ruptura
+                }
+                else
+                {
+                    mario.MovePlayer();
+                }
+            }
+            System.Threading.Thread.Sleep(2500);
+            // accciones
+
+
+
+
 
         }
         
