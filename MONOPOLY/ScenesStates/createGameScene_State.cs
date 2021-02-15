@@ -97,6 +97,7 @@ namespace MONOPOLY
             Console.ReadKey(true);
 
             config.init();
+            Console.Clear();
         }
     }
 }

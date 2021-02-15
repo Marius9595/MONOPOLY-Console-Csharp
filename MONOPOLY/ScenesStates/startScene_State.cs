@@ -11,69 +11,19 @@ namespace MONOPOLY
 
             config.init();
 
-            String Welcome = "WELCOME TO MONOPOLY";
 
             String start = "Press Any Button to start!";
 
-            void writeEspecialLine()
-            {
-                int left = config.WIDTH / 3;
-                int right = config.WIDTH - config.WIDTH / 3;
-
-                for (int i = 0; i < config.WIDTH; i++)
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    if (i == left)
-                    {
-                        Console.Write("#");
-                    }
-                    else if (i == right)
-                    {
-                        Console.Write("#");
-                    }
-                    else if (i == right + 1)
-                    {
-                        Console.Write("#");
-                    }
-                    else if (i == left + 1)
-                    {
-                        Console.Write("#");
-                    }
-                    else if (i == right - 1)
-                    {
-                        Console.Write("#");
-                    }
-                    else if (i == left - 1)
-                    {
-                        Console.Write("#");
-                    }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.Write("*");
-                    }
 
 
-                }
-                Console.Write("\n");
-            }
+            header();
 
-            Console.WriteLine();
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            
 
-            for (int i = 0; i < config.HEIGHT / 5; i++) writeEspecialLine();
-
-            Console.BackgroundColor = ConsoleColor.Black;
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
+            
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
 
-            Console.SetCursorPosition(Console.CursorLeft + config.WIDTH / 2 - Welcome.Length / 2, Console.CursorTop);
-            Console.Write(" " + Welcome + " \n");
 
             Console.WriteLine();
 
@@ -98,6 +48,75 @@ namespace MONOPOLY
             var answer = Console.ReadKey();
 
             if (answer != null) Console.Clear();
+
+        }
+
+        void writeEspecialLine()
+        {
+            int left = config.WIDTH / 3;
+            int right = config.WIDTH - config.WIDTH / 3;
+
+            for (int i = 0; i < config.WIDTH; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                if (i == left)
+                {
+                    Console.Write("#");
+                }
+                else if (i == right)
+                {
+                    Console.Write("#");
+                }
+                else if (i == right + 1)
+                {
+                    Console.Write("#");
+                }
+                else if (i == left + 1)
+                {
+                    Console.Write("#");
+                }
+                else if (i == right - 1)
+                {
+                    Console.Write("#");
+                }
+                else if (i == left - 1)
+                {
+                    Console.Write("#");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.Write("*");
+                }
+
+
+            }
+            Console.Write("\n");
+        }
+
+
+        void header()
+        {
+
+            String File = @"C:\Users\Mario\Desktop\PROYECTO C#\MONOPOLY\monopoly.txt";
+
+            String line;
+            int counter = 0;
+
+            System.IO.StreamReader file = new System.IO.StreamReader(File);
+
+            int top = 2;
+            while ((line = file.ReadLine()) != null)
+            {
+                Console.SetCursorPosition(Console.WindowWidth / 10, top);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                System.Console.WriteLine(line);
+                counter++;
+                top++;
+            }
+            config.init();
+            file.Close();
 
         }
     }

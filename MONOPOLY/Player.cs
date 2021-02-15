@@ -4,8 +4,10 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    class Player
+    class Player 
     {
+
+        private PlayerScenes_States Player_scene;
 
         private string name; 
         private int actualPosition = 0; 
@@ -50,34 +52,55 @@ namespace MONOPOLY
         }
         */
 
-        private int[] RollDices()
+        public void DisplayDices (int[] dices)
         {
-            Random rnd = new Random();
-            int dice_1 = rnd.Next(1, 7);
-            int dice_2 = rnd.Next(1, 7);
-            int total = dice_1 + dice_2;
-            int[] DICE = new int[2];
-            DICE[0] = dice_1;
-            DICE[1] = dice_2;
+            for (int i = 0; i < dices.Length; i++)
+            {
+                switch (dices[i])
+                {
+                    case 1:
+                        Console.WriteLine(Dices.One);
+                        break;
+                    case 2:
+                        Console.WriteLine(Dices.Two);
+                        break;
+                    case 3:
+                        Console.WriteLine(Dices.Three);
+                        break;
+                    case 4:
+                        Console.WriteLine(Dices.Four);
+                        break;
+                    case 5:
+                        Console.WriteLine(Dices.Five);
+                        break;
+                    case 6:
+                        Console.WriteLine(Dices.Six);
+                        break;
 
-            return DICE;
+                    default:
+                        Console.WriteLine("FATAL ERROR");
+                        break;
+                }
+
+            }
+
         }
 
-        private bool DoubleBool(int[] dice)
+        private bool DoubleBool(int[] dices)
         {
-            if (dice[0] == dice[1]) return true;
+            if (dices[0] == dices[1]) return true;
 
             else return false;
-           
+
         }
 
-        public void Move()
+        public void Move(int[] dices)
         {
-            if (DoubleBool(RollDices()))
+            if (DoubleBool(dices))
             {
                 int steps=0;
 
-                for (int i = 0;  i< RollDices().Length; i++)
+                for (int i = 0;  i< dices.Length; i++)
                 {
 
                 }
@@ -92,5 +115,16 @@ namespace MONOPOLY
         }
 
 
+
+        public void SetScene(PlayerScenes_States playerScene)
+        {
+            this.Player_scene = playerScene;
+            this.Player_scene.SetScene(this);
+        }
+
+        public void Display()
+        {
+            this.Player_scene.Draw(this);
+        }
     }
 }

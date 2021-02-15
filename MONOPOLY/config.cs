@@ -6,8 +6,8 @@ namespace MONOPOLY
 {
     static class config
     {
-        static int height = 25;
-        static int width = 80;
+        static int height = 30;
+        static int width = 100;
         static ConsoleColor BackgroundColor = ConsoleColor.Black;
         static ConsoleColor ForeGroundColor = ConsoleColor.White;
 

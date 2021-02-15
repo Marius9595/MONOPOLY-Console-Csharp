@@ -3,19 +3,19 @@
   <Class Name="MONOPOLY.Game">
     <Position X="6" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAhAAAAAAAAAAAAEAAIgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAIAAhAAAAAAAAAAAAEAAIkAAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="Scenes" />
       <Field Name="board_game" />
       <Field Name="winner" />
+      <Field Name="Scenes" />
     </ShowAsAssociation>
   </Class>
   <Class Name="MONOPOLY.Player" Collapsed="true">
     <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAkAAAAJACAAIAQAAAAAABAAAEAACAAAJAAAIAAEA=</HashCode>
+      <HashCode>AAIAkAAAAJACCAAAQAABAQABAAAEAACAAALAAAIAAEA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>

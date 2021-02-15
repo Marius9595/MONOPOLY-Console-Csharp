@@ -21,9 +21,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MONOPOLY.StartScene_State" Collapsed="true">
-    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Position X="1.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ScenesStates\startScene_State.cs</FileName>
       <NewMemberFileName>ScenesStates\StartScene_State.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -43,10 +43,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.createGameScene_State" Collapsed="true">
-    <Position X="4" Y="3.25" Width="1.5" />
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScenesStates\createGameScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.StartingGameScene_State" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>createGameScene_State.cs</FileName>
+      <FileName>StartingGameScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.RollingDicesScene_State" Collapsed="true">
+    <Position X="3.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RollingDicesScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
