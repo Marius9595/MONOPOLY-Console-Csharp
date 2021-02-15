@@ -52,39 +52,9 @@ namespace MONOPOLY
         }
         */
 
-        public void DisplayDices (int[] dices)
-        {
-            for (int i = 0; i < dices.Length; i++)
-            {
-                switch (dices[i])
-                {
-                    case 1:
-                        Console.WriteLine(Dices.One);
-                        break;
-                    case 2:
-                        Console.WriteLine(Dices.Two);
-                        break;
-                    case 3:
-                        Console.WriteLine(Dices.Three);
-                        break;
-                    case 4:
-                        Console.WriteLine(Dices.Four);
-                        break;
-                    case 5:
-                        Console.WriteLine(Dices.Five);
-                        break;
-                    case 6:
-                        Console.WriteLine(Dices.Six);
-                        break;
+        
 
-                    default:
-                        Console.WriteLine("FATAL ERROR");
-                        break;
-                }
-
-            }
-
-        }
+        
 
         private bool DoubleBool(int[] dices)
         {
