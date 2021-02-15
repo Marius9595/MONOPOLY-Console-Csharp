@@ -14,6 +14,8 @@ namespace MONOPOLY
 
             juego.Create();
 
+            juego.Start();
+
             /*
             Board board = new Board();
 

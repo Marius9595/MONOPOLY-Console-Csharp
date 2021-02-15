@@ -124,7 +124,7 @@
   <Class Name="MONOPOLY.Player" Collapsed="true">
     <Position X="17.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAkAAAAJACAAIAQAAAAAABAAAEAACAAAJAAAIAAEA=</HashCode>
+      <HashCode>AAIAkAAAABACKAAAQAAAAQABAAAGAACEAALAAAIAAEA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -135,14 +135,14 @@
     <Position X="19.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interfaces\IAbstractProperty.cs</FileName>
+      <FileName>Interfaces for properties\IAbstractProperty.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="MONOPOLY.IAbstractTitleDeed" Collapsed="true">
     <Position X="16.5" Y="4.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAABAAAIAAAAAAIAAAAAAAAAAAIAAAAEA=</HashCode>
-      <FileName>Interfaces\IAbstractTitleDeed.cs</FileName>
+      <FileName>Interfaces for properties\IAbstractTitleDeed.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="MONOPOLY.TypeofCard" Collapsed="true">
@@ -170,7 +170,7 @@
     <Position X="16.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
-      <FileName>Interfaces\IAbstractTitleDeed.cs</FileName>
+      <FileName>Interfaces for properties\IAbstractTitleDeed.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

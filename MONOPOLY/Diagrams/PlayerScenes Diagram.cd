@@ -22,7 +22,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MONOPOLY.RollingDicesScene_State" Collapsed="true">
-    <Position X="10.75" Y="2.5" Width="1.5" />
+    <Position X="9.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAABAAAAAIBAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerScenes\RollingDicesScene_State.cs</FileName>
@@ -31,8 +31,8 @@
   <Class Name="MONOPOLY.GotoJailScene_State" Collapsed="true">
     <Position X="10.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
-      <FileName>GotoJailScene_State.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>PlayerScenes\GotoJailScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

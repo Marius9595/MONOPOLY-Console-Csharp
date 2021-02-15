@@ -42,6 +42,8 @@ namespace MONOPOLY
 
         }
 
+        //TODO: arreglar transición de segunda tirada de dados
+
         int DicesValue(int[] dices)
         {
             int SumDices = 0;
@@ -92,7 +94,7 @@ namespace MONOPOLY
 
         }
 
-
+        //TODO: REFACTORIZAR JUNTO A OTRA ESCENA QUE NO DEPENDE DE JUGADORES O TABLERO
         void Transition()
         {
             for (int i = 0; i < 3; i++)

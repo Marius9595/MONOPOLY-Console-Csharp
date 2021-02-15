@@ -26,6 +26,8 @@ namespace MONOPOLY
 
             Scenes.Display(players, board_game);
 
+            /*
+
             //TODO: QUITAR DE AQUI, SOLO PARA PROBAR
 
             Player mario = new Player("mario", ConsoleColor.White);
@@ -66,11 +68,11 @@ namespace MONOPOLY
 
 
 
-
+            */
 
         }
         
-        public bool IsWinner()
+        private bool IsWinner()
         {
             int LosersCount = 0;
  
@@ -85,9 +87,6 @@ namespace MONOPOLY
                 return false; 
             
             }
-
-
-
         }
 
         
@@ -100,8 +99,57 @@ namespace MONOPOLY
                 Console.Clear();
 
                 rounds++;
-                while (players[Player_Index].Loser)
+                while (!players[Player_Index].Loser)
                 {
+                    // aqui abra que poner un if para  que jueguen los que estan en la carcel
+
+                    players[Player_Index].SetScene(new RollingDicesScene_State());
+
+                    players[Player_Index].Display();
+
+                    players[Player_Index].MovePlayer();
+
+                    //acciones
+                    Console.WriteLine("me he estoy moviendo");
+                    System.Threading.Thread.Sleep(2500);
+
+
+                    Scenes.TransitionTo(new BoardSituationScene_State());
+
+                    List<Player> playerSituaion = new List<Player>();
+                    playerSituaion.Add(players[Player_Index]);
+
+                    Scenes.Display(playerSituaion, board_game);
+
+                    playerSituaion.Remove(players[Player_Index]);
+
+                    Console.ReadLine();
+
+
+                    if (players[Player_Index].DOUBLEBOOL == true && players[Player_Index].INJAIL == false)
+                    {
+                        players[Player_Index].Display();
+
+                        if (players[Player_Index].INJAIL == true)
+                        {
+                            players[Player_Index].Display();
+
+                            Console.WriteLine("La has cagado"); //improve this
+                            System.Threading.Thread.Sleep(1500);
+
+                            players[Player_Index].SetScene(new GotoJailScene_State());
+                            players[Player_Index].Display();
+                        }
+                        else
+                        {
+                            players[Player_Index].MovePlayer();
+                        }
+                    }
+                    System.Threading.Thread.Sleep(2500);
+
+
+
+
                     if (Player_Index == players.Count - 1)
                     {
                         Player_Index = 0;
@@ -115,16 +163,7 @@ namespace MONOPOLY
                 //TODO: Seguir con la Escena pos lnazamiento de dados
 
                 /*
-                Player current = players[compt];
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("\nPlayer " + current.Name + ":");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("\nPress any key to roll the dices !\n");
-                Console.ReadKey(true);
-                int[] dices = current.RollDices();
-                int nbdouble = 0;
-                Console.ForegroundColor = ConsoleColor.Green;
-                current.Move(dices[0] + dices[1]);
+
                 Console.WriteLine("\nCurrent position :" + current.position + "\n");
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.ReadKey(true);

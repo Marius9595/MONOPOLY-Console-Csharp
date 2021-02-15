@@ -11,14 +11,14 @@ namespace MONOPOLY
         private double PaymenttoOwner;
         private double buldingCost;
         private double mortgageValue;
-        private ColorProperty color;
+        private ConsoleColor color;
 
         public PropertyFactory() {
 
         }
 
         public  void  Re_AsignValuesFactory(string Name, double Buying_cost, double PaymenttoOwner, 
-            double buldingCost, double mortgageValue, ColorProperty color)
+            double buldingCost, double mortgageValue, ConsoleColor color)
         {
             this.Name = Name;
             this.Buying_cost=Buying_cost;

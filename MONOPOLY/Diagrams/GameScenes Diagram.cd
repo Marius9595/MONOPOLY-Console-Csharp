@@ -36,17 +36,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.createGameScene_State" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+    <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ScenesStates\createGameScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.StartingGameScene_State" Collapsed="true">
-    <Position X="7.75" Y="3.25" Width="1.5" />
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ScenesStates\StartingGameScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.BoardSituationScene_State" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BoardSituationScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

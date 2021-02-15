@@ -6,10 +6,7 @@ namespace MONOPOLY
 {
 
 
-    enum ColorProperty
-    {
-        BROWN,BLUE,PINK,ORANGE,RED,YELLOW,GREEN,PURPLE
-    }
+
 
     class PropertySquare : AbstractSquare, IAbstractProperty, IAbstractTitleDeed
     {
@@ -20,11 +17,11 @@ namespace MONOPOLY
         private  double buldingCost;
         private TitleDeedSituation situation;
         private Player owner;
-        private ColorProperty color;
+        private ConsoleColor color;
 
 
         public string NAME => name;
-        public ColorProperty COLOR_PROPERTY { get => color; }
+        public ConsoleColor COLOR_PROPERTY { get => color; }
         public double MORTGAGE_VALUE { get => mortgageValue;}
         public double BULDING_COST { get => buldingCost; }
         public double BUYING_COST => buying_cost;
@@ -35,7 +32,7 @@ namespace MONOPOLY
 
         public PropertySquare(string Name, double Buying_cost,
             double paymenttoOwner, double buldingCost, 
-            double mortgageValue, ColorProperty color , int position) : base(position)
+            double mortgageValue, ConsoleColor color , int position) : base(position)
         {
             this.name = Name;
             this.buying_cost = Buying_cost;
