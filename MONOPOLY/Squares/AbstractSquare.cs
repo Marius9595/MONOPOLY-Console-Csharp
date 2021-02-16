@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    abstract class  AbstractSquare
+    public abstract class  AbstractSquare
     {
         private int position;
 

@@ -13,7 +13,7 @@ namespace MONOPOLY
         public double BUYING_COST { get;}
         public double PAYTOOWNER { get ;}
         public double MORTGAGE_VALUE { get; }
-        public TitleDeedSituation SITUATION { get;}
+        public TitleDeedSituation SITUATION { get; set; }
         
     }
 }

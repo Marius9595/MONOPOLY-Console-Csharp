@@ -13,6 +13,6 @@ namespace MONOPOLY
             this.player = player;
         }
 
-        public abstract void Draw(Player player);
+        public abstract void Draw(Player player, Board board);
     }
 }

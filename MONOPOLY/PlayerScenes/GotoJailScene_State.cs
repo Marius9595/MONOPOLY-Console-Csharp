@@ -6,7 +6,7 @@ namespace MONOPOLY
 {
     class GotoJailScene_State : PlayerScenes_States
     {
-        public override void Draw(Player player)
+        public override void Draw(Player player, Board board)
         {
             message();
 

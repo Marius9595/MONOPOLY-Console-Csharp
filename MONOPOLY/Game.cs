@@ -61,10 +61,11 @@ namespace MONOPOLY
                     // aqui abra que poner un if para  que jueguen los que estan en la carcel
 
                     players[Player_Index].SetScene(new RollingDicesScene_State());
-                    players[Player_Index].Display();
+                    players[Player_Index].Display(board_game);
                     players[Player_Index].MovePlayer();
-                    System.Threading.Thread.Sleep(2000);
+                    
 
+                    //CONSECUENCIAS DE ESTAR EN ESA CASILLA ACCIONES
 
                     PlayerActions(players[Player_Index], board_game);
 
@@ -72,14 +73,14 @@ namespace MONOPOLY
                     if (players[Player_Index].DOUBLEBOOL == true && players[Player_Index].INJAIL == false)
                     {
                         players[Player_Index].SetScene(new RollingDicesScene_State());
-                        players[Player_Index].Display();
+                        players[Player_Index].Display(board_game);
 
                         if (players[Player_Index].INJAIL == true)
                         {
                             Console.Clear();
 
                             players[Player_Index].SetScene(new GotoJailScene_State());
-                            players[Player_Index].Display();
+                            players[Player_Index].Display(board_game);
                             players[Player_Index].INJAIL = true;
                         }
                         else
@@ -115,13 +116,16 @@ namespace MONOPOLY
 
                     List<Player> playerSituaion = new List<Player>();
                     playerSituaion.Add(player);
+                    System.Threading.Thread.Sleep(2000);
 
                     Scenes.Display(playerSituaion, board);
+
+                    System.Threading.Thread.Sleep(2500);
 
                     playerSituaion.Remove(player);
 
                     player.SetScene(new MenuPlayerScene_State());
-                    player.Display();
+                    player.Display(board);
 
                 }
 
@@ -181,6 +185,8 @@ namespace MONOPOLY
             HotelProperty htp = new HotelProperty(hsp, null);
             Card c = new Card(Type_Card.Chance, 0);
             Square s = new Square();
+
+
             Console.WriteLine("The square you are currently on is the following:");
             if (board_game.board[player.position].GetType() == p.GetType())
             {

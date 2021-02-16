@@ -9,6 +9,7 @@ namespace MONOPOLY
         static void Main(string[] args)
         {
 
+            //TODO: agarrar los fallos, ESTO ES PARA EL FINAL
 
             Game juego = new Game();
 

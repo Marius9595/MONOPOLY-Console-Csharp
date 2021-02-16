@@ -4,10 +4,12 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    public class Player 
+    public class Player : Player_AbstractStrategy
     {
 
         private PlayerScenes_States Player_scene;
+
+        private Player_AbstractStrategy Player_action;
 
         private string name; 
         private int actualPosition = 0; 
@@ -105,9 +107,19 @@ namespace MONOPOLY
             this.Player_scene.SetScene(this);
         }
 
-        public void Display()
+        public void Display(Board board)
         {
-            this.Player_scene.Draw(this);
+            this.Player_scene.Draw(this, board);
+        }
+
+        public override void Action(Player player, Board board)
+        {
+            Player_action.Action(player,board);
+        }
+
+        public void SetStrategy (Player_AbstractStrategy Strategy)
+        {
+            this.Player_action = Strategy;
         }
     }
 }

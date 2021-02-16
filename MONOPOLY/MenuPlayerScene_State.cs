@@ -6,9 +6,11 @@ namespace MONOPOLY
 {
     class MenuPlayerScene_State : PlayerScenes_States
     {
+        Scenes scenes = new Scenes(new BoardSituationScene_State());
+        Board board = new Board();
+        List<Player> Players = new List<Player>();
 
-
-        public override void Draw(Player player)
+        public override void Draw(Player player , Board board)
         {
             Console.Clear();
             Console.BackgroundColor = player.COLOR;
@@ -48,15 +50,18 @@ namespace MONOPOLY
   
                     Console.ReadKey();
                     Console.Clear();
-                    Draw(player);
+                    Draw(player, board);
                     break;
                 case 1:
                     break;
                 case 2:
+                    Players.Add(player);
                     Dashboard(player);
+                    Players.Remove(player);
                     break;
                 case 3:
-                    //PurchaseProperty(player, compt);
+                    player.SetStrategy(new BuyProperty_Strategy());
+                    player.Action(player, board);
                     break;
                 case 4:
                     //BuyHouseProperty(player, compt);
@@ -75,9 +80,14 @@ namespace MONOPOLY
         }
 
 
-        public void Dashboard(Player player)
+        private void Dashboard(Player player)
         {
             Console.Clear();
+
+            scenes.Display(Players, board);
+
+            Console.WriteLine();
+
             Console.WriteLine("Your position is: " + player.ACTUALPOSITION);
             Console.WriteLine("You have: $" + player.CURRENTMONEY);
             Console.WriteLine("You own " + player.properties.Count + " properties:\n");
@@ -88,9 +98,13 @@ namespace MONOPOLY
                     Console.WriteLine(TitleDeed.NAME);
                 }
             }
+
+            
+
+            Console.WriteLine();
             Console.WriteLine("\nPress any key to go back to the menu.");
             Console.ReadKey(true);
-            Draw(player);
+            Draw(player,board);
         }
     }
 }

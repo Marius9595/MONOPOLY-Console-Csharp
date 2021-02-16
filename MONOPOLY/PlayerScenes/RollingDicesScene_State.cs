@@ -8,7 +8,7 @@ namespace MONOPOLY
     {
 
 
-        public override void Draw(Player player)
+        public override void Draw(Player player, Board board)
         {
             Console.Clear();
             Transition();

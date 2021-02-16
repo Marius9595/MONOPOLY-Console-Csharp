@@ -26,7 +26,7 @@ namespace MONOPOLY
         public double BULDING_COST { get => buldingCost; }
         public double BUYING_COST => buying_cost;
         public double PAYTOOWNER => paymenttoOwner;
-        public TitleDeedSituation SITUATION => situation;
+        public TitleDeedSituation SITUATION { get => situation; set => situation = value; }
 
         
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MONOPOLY
 {
-    class Board
+   public class Board
     {
 
         private static Board instance = null;

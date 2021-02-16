@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MONOPOLY.Player">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+  <Class Name="MONOPOLY.Player" Collapsed="true">
+    <Position X="1.25" Y="2.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAIAkAAAABACKAAAQAAAAQABAAAGAACEAALAAAIAAEA=</HashCode>
+      <HashCode>AAIAkAAAABACKAAAQAAABQEBAAAGAACEAALAAAoAAEQ=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -22,17 +22,38 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MONOPOLY.RollingDicesScene_State" Collapsed="true">
-    <Position X="9.5" Y="1.25" Width="1.5" />
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="MONOPOLY.PlayerScenes_States" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="1.75" />
+        <Point X="6" Y="1.062" />
+        <Point X="10.25" Y="1.062" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAABAAAAAIBAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerScenes\RollingDicesScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MONOPOLY.GotoJailScene_State" Collapsed="true">
-    <Position X="10.5" Y="4" Width="1.5" />
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="MONOPOLY.PlayerScenes_States" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="3.046" />
+        <Point X="6" Y="3.875" />
+        <Point X="10.25" Y="3.875" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAEAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>PlayerScenes\GotoJailScene_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MONOPOLY.MenuPlayerScene_State" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEgAAAAAAAIAAAAAgAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>MenuPlayerScene_State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
