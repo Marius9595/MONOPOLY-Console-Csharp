@@ -7,10 +7,9 @@ namespace MONOPOLY
     class MenuPlayerScene_State : PlayerScenes_States
     {
         Scenes scenes = new Scenes(new BoardSituationScene_State());
-        Board board = new Board();
         List<Player> Players = new List<Player>();
 
-        public override void Draw(Player player , Board board)
+        public override void Draw(Player player , AbstractSquare[] board)
         {
             Console.Clear();
             Console.BackgroundColor = player.COLOR;
@@ -56,7 +55,7 @@ namespace MONOPOLY
                     break;
                 case 2:
                     Players.Add(player);
-                    Dashboard(player);
+                    Dashboard(player, board);
                     Players.Remove(player);
                     break;
                 case 3:
@@ -80,7 +79,7 @@ namespace MONOPOLY
         }
 
 
-        private void Dashboard(Player player)
+        private void Dashboard(Player player , AbstractSquare[] board)
         {
             Console.Clear();
 

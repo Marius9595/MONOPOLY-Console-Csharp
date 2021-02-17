@@ -6,9 +6,9 @@ namespace MONOPOLY
 {
     class BoardSituationScene_State : Scenes_States
     {
-        public override void Draw(List<Player> players, Board board)
+        public override void Draw(List<Player> players, AbstractSquare[] board)
         {
-            board.CreateBoard();
+            
             Console.Clear();
 
             header(players[0]);
@@ -20,8 +20,8 @@ namespace MONOPOLY
 
             Console.WriteLine();
 
-            FormatSquareInfo(board.board[players[0].ACTUALPOSITION]);
-            Console.WriteLine(board.board[players[0].ACTUALPOSITION].InfoSquare());
+            FormatSquareInfo(board[players[0].ACTUALPOSITION]);
+            Console.WriteLine(board[players[0].ACTUALPOSITION].InfoSquare());
 
             config.init();
         }

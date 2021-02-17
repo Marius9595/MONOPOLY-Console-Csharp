@@ -19,7 +19,7 @@ namespace MONOPOLY
             this.state.SetScene(this);
         }
 
-        public void Display(List<Player> players, Board board)
+        public void Display(List<Player> players, AbstractSquare[] board)
         {
             this.state.Draw(players, board);
         }

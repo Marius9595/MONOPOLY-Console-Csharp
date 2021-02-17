@@ -14,6 +14,8 @@ namespace MONOPOLY
         public double PAYTOOWNER { get ;}
         public double MORTGAGE_VALUE { get; }
         public TitleDeedSituation SITUATION { get; set; }
+
+        public  Player OWNER { get; }
         
     }
 }

@@ -6,7 +6,7 @@ namespace MONOPOLY
 {
     class FinalScene_State : Scenes_States
     {
-        public override void Draw(List<Player> players, Board board)
+        public override void Draw(List<Player> players, AbstractSquare[] board)
         {
             config.init();
 

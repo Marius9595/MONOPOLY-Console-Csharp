@@ -13,7 +13,7 @@ namespace MONOPOLY
             this.scenes = scenes;
         }
 
-        public abstract void Draw(List<Player> players, Board board);
+        public abstract void Draw(List<Player> players, AbstractSquare[] board);
 
         
     }

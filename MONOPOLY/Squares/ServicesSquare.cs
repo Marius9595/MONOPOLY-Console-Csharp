@@ -20,6 +20,7 @@ namespace MONOPOLY
         public double BUYING_COST => buying_cost;
         public double PAYTOOWNER => paymenttoOwner;
         public TitleDeedSituation SITUATION { get => situation; set => situation = value; }
+        public Player OWNER => owner;
 
         public double MORTGAGE_VALUE => mortgageValue;
 

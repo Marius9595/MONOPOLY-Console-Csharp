@@ -10,21 +10,27 @@ namespace MONOPOLY
 
         private List<Player> players = new List<Player>(); 
         private Board board_game = new Board();
+
+        private AbstractSquare[] TheBoard;
         private int rounds=0; // number of rounds played
         private Player winner;
         private Scenes Scenes = new Scenes(new StartScene_State());
 
         public void Create()
         {
-            Scenes.Display(players, board_game);
+            this.board_game.CreateBoard();
+
+            this.TheBoard = board_game.board;
+
+            Scenes.Display(players, TheBoard);
 
             Scenes.TransitionTo(new createGameScene_State());
 
-            Scenes.Display(players, board_game);
+            Scenes.Display(players, TheBoard);
 
             Scenes.TransitionTo(new StartingGameScene_State());
 
-            Scenes.Display(players, board_game);
+            Scenes.Display(players, TheBoard);
 
 
         }
@@ -58,35 +64,35 @@ namespace MONOPOLY
                 rounds++;
                 while (!players[Player_Index].Loser)
                 {
-                    // aqui abra que poner un if para  que jueguen los que estan en la carcel
+                    //TODO: aqui abra que poner un if para  que jueguen los que estan en la carcel
 
                     players[Player_Index].SetScene(new RollingDicesScene_State());
-                    players[Player_Index].Display(board_game);
+                    players[Player_Index].Display(this.TheBoard);
                     players[Player_Index].MovePlayer();
                     
 
-                    //CONSECUENCIAS DE ESTAR EN ESA CASILLA ACCIONES
+                    //TODO: CONSECUENCIAS DE ESTAR EN ESA CASILLA ACCIONES
 
-                    PlayerActions(players[Player_Index], board_game);
+                    PlayerActions(players[Player_Index], TheBoard);
 
 
                     if (players[Player_Index].DOUBLEBOOL == true && players[Player_Index].INJAIL == false)
                     {
                         players[Player_Index].SetScene(new RollingDicesScene_State());
-                        players[Player_Index].Display(board_game);
+                        players[Player_Index].Display(this.TheBoard);
 
                         if (players[Player_Index].INJAIL == true)
                         {
                             Console.Clear();
 
                             players[Player_Index].SetScene(new GotoJailScene_State());
-                            players[Player_Index].Display(board_game);
+                            players[Player_Index].Display(TheBoard);
                             players[Player_Index].INJAIL = true;
                         }
                         else
                         {
                             players[Player_Index].MovePlayer();
-                            PlayerActions(players[Player_Index], board_game);
+                            PlayerActions(players[Player_Index], this.TheBoard);
                         }
                     }
                     
@@ -106,7 +112,7 @@ namespace MONOPOLY
                 }
 
 
-                void PlayerActions(Player player , Board board)
+                void PlayerActions(Player player , AbstractSquare[] board)
                 {
                     Console.WriteLine($"{player.NAME}, we are you locating in the next square");
                     System.Threading.Thread.Sleep(2000);

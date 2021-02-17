@@ -7,7 +7,7 @@ namespace MONOPOLY
 {
     class StartingGameScene_State : Scenes_States
     {
-        public override void Draw(List<Player> players, Board board)
+        public override void Draw(List<Player> players, AbstractSquare[] board)
         {
             Console.WindowHeight = 40;
             Console.WindowWidth = 160;

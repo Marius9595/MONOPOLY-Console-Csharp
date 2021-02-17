@@ -8,7 +8,7 @@ namespace MONOPOLY
     {
 
 
-        public override void Draw(Player player, Board board)
+        public override void Draw(Player player, AbstractSquare[] board)
         {
             Console.Clear();
             Transition();
@@ -31,7 +31,6 @@ namespace MONOPOLY
             Console.WriteLine("\nPress any key to roll the dices!\n");
             Console.ReadKey(true);
 
-
             int[] dices = Dices.RollDices();
 
             DisplayDices(dices);
@@ -42,14 +41,14 @@ namespace MONOPOLY
 
         }
 
-        //TODO: arreglar transición de segunda tirada de dados
+        
 
         int DicesValue(int[] dices)
         {
             int SumDices = 0;
             for (int i = 0; i < dices.Length; i++)
             {
-                SumDices = +dices[i];
+                SumDices +=dices[i];
             }
 
             return SumDices;

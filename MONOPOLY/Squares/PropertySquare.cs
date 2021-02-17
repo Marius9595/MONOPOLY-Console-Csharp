@@ -28,6 +28,8 @@ namespace MONOPOLY
         public double PAYTOOWNER => paymenttoOwner;
         public TitleDeedSituation SITUATION { get => situation; set => situation = value; }
 
+        public Player OWNER => owner;
+
         
 
         public PropertySquare(string Name, double Buying_cost,

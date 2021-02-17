@@ -8,7 +8,7 @@ namespace MONOPOLY
 {
     class createGameScene_State : Scenes_States
     {
-        public override void Draw(List<Player> players, Board board)
+        public override void Draw(List<Player> players, AbstractSquare[] board)
         {
 
             

@@ -81,19 +81,19 @@ namespace MONOPOLY
         {
             int ControllerCount = 0;
 
-           if (this.ACTUALPOSITION + this.dices >=40)
+           if (this.actualPosition + this.dices >=39)
            {
-                ControllerCount = 40 - this.ACTUALPOSITION + this.dices;
+                ControllerCount = 40 - this.actualPosition + this.dices;
 
-                this.ACTUALPOSITION = 0;
+                this.actualPosition = 0;
 
-                this.CURRENTMONEY += 200;
+                this.currentMoney += 200;
 
-                this.ACTUALPOSITION += ControllerCount;
+                this.actualPosition += ControllerCount;
 
            } else
            {
-             this.ACTUALPOSITION += this.dices;
+             this.actualPosition += this.dices;
            }
                 
 
@@ -107,12 +107,12 @@ namespace MONOPOLY
             this.Player_scene.SetScene(this);
         }
 
-        public void Display(Board board)
+        public void Display(AbstractSquare[] board)
         {
             this.Player_scene.Draw(this, board);
         }
 
-        public override void Action(Player player, Board board)
+        public override void Action(Player player, AbstractSquare[] board)
         {
             Player_action.Action(player,board);
         }
