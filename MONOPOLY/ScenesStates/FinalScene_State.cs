@@ -8,6 +8,7 @@ namespace MONOPOLY
     {
         public override void Draw(List<Player> players, AbstractSquare[] board)
         {
+            Console.Clear();
             config.init();
 
             String finish = "Press Any Button to FINISH";
@@ -17,7 +18,7 @@ namespace MONOPOLY
             {
                 if (players[i].Loser == false)
                 {
-                    Welcome = $"THE WINNER IS {players[0].NAME.ToUpper()}";
+                    Welcome = $"THE WINNER IS {players[i].NAME.ToUpper()}";
                 }
 
             }

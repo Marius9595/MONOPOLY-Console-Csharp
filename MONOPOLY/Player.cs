@@ -19,11 +19,14 @@ namespace MONOPOLY
         private bool get_out_of_jail_card = false; // REVISAR
         private bool loser = false; //REVISAR
 
+
+        private int roundsInJail=0;
         private int dices;
         private Boolean doublebool;
         private ConsoleColor color;
 
         public int DICES { get => dices; set => dices = value; }
+        public int ROUNDSINJAIL { get=>roundsInJail; set=> roundsInJail= value; }
         public Boolean DOUBLEBOOL { get => doublebool; set => doublebool= value; }
 
 
