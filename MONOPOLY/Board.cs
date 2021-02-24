@@ -111,7 +111,7 @@ namespace MONOPOLY
             propertyFactory.Re_AsignValuesFactory("Pennsylvania Avenue", 320, 28, 200, 160, ConsoleColor.Green);
             board[34] = propertyFactory.GetSquare(34);
             servicesFactory.re_AsignValues("Short Line", 200, 25);
-            board[35] = propertyFactory.GetSquare(35);
+            board[35] = servicesFactory.GetSquare(35);
             board[36] = ChanceCardFactory.GetSquare(36);
             propertyFactory.Re_AsignValuesFactory("Park Place", 350, 35, 200, 175, ConsoleColor.Blue);
             board[37] = propertyFactory.GetSquare(37);
@@ -125,7 +125,7 @@ namespace MONOPOLY
             //TODO: mirar mortagage de servicios
         }
 
-        public void Draw(AbstractSquare[] board)
+        public void Draw(AbstractSquare[] board, Player players)
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
@@ -136,12 +136,31 @@ namespace MONOPOLY
             config.init();
 
             drawFirstLine(board);
+            drawcenter(board);
+            drawfinal(board);
 
+            Console.WriteLine();
+            config.init();
+            writePlayerPositions(board, players);
 
+            
 
-            Console.ReadKey(true);
+            
         }
 
+
+
+        private void writePlayerPositions(AbstractSquare[] board, Player player)
+        {
+
+            Console.WriteLine();
+            Console.SetCursorPosition(Console.WindowWidth / 3, Console.CursorTop);
+            Console.Write($"your position is ");
+                EvalutateAbstractSquare(board[player.ACTUALPOSITION]);
+                Console.WriteLine();
+                config.init();
+            
+        }
 
         private void drawFirstLine(AbstractSquare[] board)
         {
@@ -155,7 +174,56 @@ namespace MONOPOLY
 
         private void drawcenter(AbstractSquare[] board)
         {
+            int top=6;
+            int ancho_1 = Console.WindowWidth / 4;
+            int ancho_2 = (Console.WindowWidth / 4)+10*4;
 
+            bool firstcolumn = false;
+            bool secondcolumn = false;
+
+            int index_1 = 19;
+            int index_2 = 31;
+
+            for (int i = 0; i <19; i++)
+            {
+                if (!firstcolumn && !secondcolumn)
+                {
+                    Console.SetCursorPosition(ancho_1, top);
+                    EvalutateAbstractSquare(board[index_1]);
+                    firstcolumn = true;
+                    index_1--;
+                }
+                else if (firstcolumn && !secondcolumn)
+                {
+                    Console.SetCursorPosition(ancho_2, top);
+                    EvalutateAbstractSquare(board[index_2]);
+                    secondcolumn = true;
+                    index_2++;
+                }
+
+                if (firstcolumn && secondcolumn)
+                {
+                    top++;
+                    firstcolumn = false;
+                    secondcolumn = false;
+                }
+
+            }
+            
+
+        }
+
+        private void drawfinal(AbstractSquare[] board)
+        {
+            int correction=9;
+            for (int position = 0; position <10; position++)
+            {               
+                EvalutateAbstractSquare(board[position +correction]);
+                Console.Write(" ");
+                correction = correction-2;
+
+            }
+            Console.WriteLine();
         }
 
 
@@ -164,13 +232,21 @@ namespace MONOPOLY
             if (square is PropertySquare)
             {
                 Console.BackgroundColor = ((PropertySquare)square).COLOR_PROPERTY;
-                Console.ForegroundColor = ConsoleColor.Black;
+                if (square.POSITION==37 || square.POSITION==39)
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Black;
+                }
+                
                 Console.Write(" " + ((PropertySquare)square).POSITION + " ");
             }
             else if (square is ServicesSquare  && (square.POSITION==5 || square.POSITION == 15|| square.POSITION == 25|| square.POSITION ==35))
             {
 
-                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.BackgroundColor = ConsoleColor.DarkMagenta;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(" " + square.POSITION + " ");
 

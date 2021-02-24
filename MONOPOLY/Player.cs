@@ -110,9 +110,10 @@ namespace MONOPOLY
             this.Player_scene.SetScene(this);
         }
 
-        public void Display(AbstractSquare[] board)
+        public void Display(AbstractSquare[] board )
         {
-            this.Player_scene.Draw(this, board);
+            Board theboard = new Board();
+            this.Player_scene.Draw(this, board, theboard);
         }
 
         public override void Action(Player player, AbstractSquare[] board)

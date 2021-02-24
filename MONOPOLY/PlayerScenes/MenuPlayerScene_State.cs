@@ -9,7 +9,7 @@ namespace MONOPOLY
         Scenes scenes = new Scenes(new BoardSituationScene_State());
         List<Player> Players = new List<Player>();
 
-        public override void Draw(Player player , AbstractSquare[] board)
+        public override void Draw(Player player , AbstractSquare[] board, Board Theboard)
         {
             Console.Clear();
             Console.BackgroundColor = player.COLOR;
@@ -44,19 +44,18 @@ namespace MONOPOLY
             {
                 case 0:
                     Console.Clear();
-                    Console.WriteLine("Game Status :");
 
-                        Console.WriteLine("\n" + player.toString());
-  
+                    Theboard.Draw(board,player);
+                    Console.WriteLine("\nPress any key to go back to the menu.");
                     Console.ReadKey();
                     Console.Clear();
-                    Draw(player, board);
+                    Draw(player, board, Theboard);
                     break;
                 case 1:
                     break;
                 case 2:
                     Players.Add(player);
-                    Dashboard(player, board);
+                    Dashboard(player, board, Theboard);
                     Players.Remove(player);
                     break;
                 case 3:
@@ -80,7 +79,7 @@ namespace MONOPOLY
         }
 
 
-        private void Dashboard(Player player , AbstractSquare[] board)
+        private void Dashboard(Player player , AbstractSquare[] board, Board Theboard)
         {
             Console.Clear();
 
@@ -104,7 +103,7 @@ namespace MONOPOLY
             Console.WriteLine();
             Console.WriteLine("\nPress any key to go back to the menu.");
             Console.ReadKey(true);
-            Draw(player,board);
+            Draw(player,board,Theboard);
         }
     }
 }

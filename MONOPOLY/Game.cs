@@ -22,7 +22,7 @@ namespace MONOPOLY
 
             this.TheBoard = board_game.board;
 
-            board_game.Draw(TheBoard);  //borrar!!!!
+           
 
             Scenes.Display(players, TheBoard);
 
