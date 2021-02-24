@@ -30,8 +30,8 @@ namespace MONOPOLY
             Console.WriteLine("1 : Finish Turn");
             Console.WriteLine("2 : Your DashBoard");
             Console.WriteLine("3 : Purchase the property");
-            Console.WriteLine("4 : Buy House for property");
-            Console.WriteLine("5 : Buy Hotel for property");
+            Console.WriteLine("4 : Buy House for property (developing...)");
+            Console.WriteLine("5 : Buy Hotel for property(developing...)");
             Console.WriteLine("6 : Declare Bankrupt");
             Console.WriteLine("7 : Quit Game");
             Console.Write("(1-7)>");
@@ -43,6 +43,7 @@ namespace MONOPOLY
             switch (answer)
             {
                 case 0:
+                    Console.Clear();
                     Console.WriteLine("Game Status :");
 
                         Console.WriteLine("\n" + player.toString());

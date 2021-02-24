@@ -22,6 +22,8 @@ namespace MONOPOLY
 
             this.TheBoard = board_game.board;
 
+            board_game.Draw(TheBoard);  //borrar!!!!
+
             Scenes.Display(players, TheBoard);
 
             Scenes.TransitionTo(new createGameScene_State());
@@ -40,6 +42,8 @@ namespace MONOPOLY
 
         public void Start()
         {
+
+
             int Player_Index = 0;
 
             while (IsWinner(players)!=true)
@@ -53,13 +57,14 @@ namespace MONOPOLY
                 if (!players[Player_Index].Loser && !players[Player_Index].INJAIL)
                 {
                     //TODO: aqui abra que poner un if para  que jueguen los que estan en la carcel
+
                     
                     players[Player_Index].SetScene(new RollingDicesScene_State());
                     players[Player_Index].Display(this.TheBoard);
 
                     players[Player_Index].MovePlayer();
 
-
+                    WhatHappensInthePosition(players, TheBoard, Player_Index);
                     //TODO: CONSECUENCIAS DE ESTAR EN ESA CASILLA ACCIONES
 
                     PlayerActions(players[Player_Index], TheBoard);
@@ -83,6 +88,101 @@ namespace MONOPOLY
         }
 
 
+
+        private void WhatHappensInthePosition(List<Player> players, AbstractSquare[] board, int PlayerIndex)
+        {
+            AbstractSquare Square = board[players[PlayerIndex].ACTUALPOSITION];
+            Player CurrentPlayer = players[PlayerIndex];
+            Player Owner;
+
+            if (Square is IAbstractTitleDeed && !(((IAbstractTitleDeed)Square).OWNER is null))
+            {
+                Owner = ((IAbstractTitleDeed)Square).OWNER;
+
+                if (CurrentPlayer!=Owner)
+                {
+                    CurrentPlayer.CURRENTMONEY -= ((IAbstractTitleDeed)Square).PAYTOOWNER;
+                    Owner.CURRENTMONEY+= ((IAbstractTitleDeed)Square).PAYTOOWNER; ;
+                }
+            } 
+            else if (Square is CardSquare)
+
+            {
+                ActionOfCard(CurrentPlayer,(CardSquare)Square);
+                
+            }
+            else if (Square is IncomeTaxSquare)
+            {
+                CurrentPlayer.CURRENTMONEY += ((IncomeTaxSquare)Square).TAX;
+            }
+            else if (Square is JailSquare && Square.POSITION==10)
+            {
+                CurrentPlayer.INJAIL = true;
+            }
+
+        }
+
+
+        //TODO: PODRÍA CREARSE UN REFACTORIZADO O MEJOR DICHO METER DENTRO DE UN PATRON
+        private void ActionOfCard(Player player, CardSquare card)
+        {
+            if (card.typeofCard == TypeofCard.Community)
+            {
+                switch (card.CONTENT)
+                {
+                    case (int)Community.GotoJail:
+                        card.GotoJail(player);
+                        break;
+                    case (int)Community.GetoutfromJail:
+                        card.GetoutfromJail(player);
+                        break;
+                    case (int)Community.MoveBackward:
+                        card.MoveBackward(player);
+                        break;
+                    case (int)Community.MoveForward:
+                        card.MoveForward(player);
+                        break;
+                    case (int)Community.Paytaxes:
+                        card.Paytaxes(player);
+                        break;
+                    case (int)Community.ReceivefromBank:
+                        card.ReceivefromBank(player);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (card.typeofCard == TypeofCard.Chance)
+            {
+                switch (card.CONTENT)
+                {
+                    case (int)Chances.GotoJail:
+                        card.GotoJail(player);
+                        break;
+                    case (int)Chances.GetoutfromJail:
+                        card.GetoutfromJail(player);
+                        break;
+                    case (int)Chances.MoveBackward:
+                        card.MoveBackward(player);
+                        break;
+                    case (int)Chances.MoveForward:
+                        card.MoveForward(player);
+                        break;
+                    case (int)Chances.Paytaxes:
+                        card.Paytaxes(player);
+                        break;
+                    case (int)Chances.ReceivefromBank:
+                        card.ReceivefromBank(player);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        }
+
+
+
         private Player LookingWinner(List<Player> players)
         {
             Player Winner;
@@ -96,7 +196,7 @@ namespace MONOPOLY
         }
 
 
-        //TODO: solucionar el finalizar el juego
+
         private bool IsWinner(List<Player> players)
         {
 
@@ -114,25 +214,6 @@ namespace MONOPOLY
             if (Losers.Count == (players.Count - 1)) return true;
             else return false;
 
-
-
-            /*
-            bool answer = false;
-            int CountLosers = 0;
-
-            foreach (Player player in players)
-            {
-                if (player.Loser == true) CountLosers++;
-
-            }
-            if (CountLosers == players.Count-1) answer = true;
-
-            if (CountLosers != 0)
-            {
-                CountLosers = 0;
-            }
-
-            return answer; */
         }
 
 

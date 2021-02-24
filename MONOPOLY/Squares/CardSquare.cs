@@ -7,26 +7,28 @@ namespace MONOPOLY
 
     public enum TypeofCard { Community, Chance }
 
+    public enum Chances
+    {
+        GetoutfromJail = 1, PaytoPlayer, Paytaxes,
+        ReceivefromBank, MoveForward, MoveBackward,
+        GotoJail, TakeOther
+    }
+    public enum Community
+    {
+        GetoutfromJail = 1, PaytoPlayer, Paytaxes,
+        ReceivefromBank, MoveForward, MoveBackward,
+        GotoJail, TakeOther
+    }
+
     class CardSquare : AbstractSquare
     {
         private int content;                                                   
         private int rand_steps;
         private int rand_cash;
-        private TypeofCard typeofCard;
+        public TypeofCard typeofCard;
 
         
-        public enum Chances
-        {
-            GetoutfromJail = 1, PaytoPlayer, Paytaxes,
-            ReceivefromBank, MoveForward, MoveBackward,
-            GotoJail, TakeOther
-        }
-        public enum Community
-        {
-            GetoutfromJail = 1, PaytoPlayer, Paytaxes,
-            ReceivefromBank, MoveForward, MoveBackward,
-            GotoJail, TakeOther
-        }
+
 
         public int RAND_STEPS { get => rand_steps;}
         public int CONTENT { get => content;}
@@ -73,7 +75,6 @@ namespace MONOPOLY
                 case TypeofCard.Chance:
 
                     if (this.content == (int)Chances.GetoutfromJail) { return "Get out of jail"; }
-                    else if (this.content == (int)Chances.PaytoPlayer) { return "Pay $" + this.rand_cash + " to the player who played before you"; }
                     else if (this.content == (int)Chances.Paytaxes) { return "Pay $" + this.rand_cash + " for taxes"; }
                     else if (this.content == (int)Chances.ReceivefromBank) { return "Receive $" + this.rand_cash + " from the bank"; }
                     else if (this.content == (int)Chances.MoveForward) { return "Move " + this.rand_steps + " squares forward"; }
@@ -84,8 +85,7 @@ namespace MONOPOLY
                 case TypeofCard.Community:
 
                     if (this.content == (int)Community.GetoutfromJail) { return "Get out of jail"; }
-                    else if (this.content == (int)Community.PaytoPlayer) { return "Pay $" + this.rand_cash + " to the player who played before you"; }
-                    else if (this.content == (int)Community.Paytaxes) { return "Pay "+$"{this.rand_cash} for taxes"; }
+                    else if (this.content == (int)Community.Paytaxes) { return "Pay " + $"{this.rand_cash} for taxes"; }
                     else if (this.content == (int)Community.ReceivefromBank) { return "Receive $" + this.rand_cash + " from the bank"; }
                     else if (this.content == (int)Community.MoveForward) { return "Move " + this.rand_steps + " squares forward"; }
                     else if (this.content == (int)Community.MoveBackward) { return "Move " + this.rand_steps + " squares backward"; }
@@ -100,6 +100,16 @@ namespace MONOPOLY
             }
 
         }
+
+        public void MoveForward(Player player) => player.ACTUALPOSITION += rand_steps;
+        public void MoveBackward(Player player) => player.ACTUALPOSITION -= rand_steps;
+        public void Paytaxes(Player player) => player.CURRENTMONEY -= rand_cash;
+        public void ReceivefromBank(Player player) => player.CURRENTMONEY += rand_cash;
+        public void GotoJail(Player player) => player.INJAIL = true;
+        public void GetoutfromJail(Player player) => player.INJAIL = false;
+
+
+
 
         public override string InfoSquare()
         {

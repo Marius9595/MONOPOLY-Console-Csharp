@@ -17,32 +17,8 @@ namespace MONOPOLY
 
             juego.Start();
 
-            /*
-            Board board = new Board();
-
-            Player Mario = new Player("mario", ConsoleColor.Red);
-
-            Console.BackgroundColor = Mario.COLOR;
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($" {Mario.NAME.ToUpper()}               ");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($" {Mario.NAME.ToUpper()} is your turn  ");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($" {Mario.NAME.ToUpper()}               ");
-            config.init();
-            Console.WriteLine(); 
-
-            config.init();
-            Console.WriteLine("\nPress any key to roll the dices!\n");
-            Console.ReadKey(true);
-
-
-            int[] Dados = Dices.RollDices();
-
-            Mario.DisplayDices(Dados);
-            */
-
+           
+ 
 
 
 

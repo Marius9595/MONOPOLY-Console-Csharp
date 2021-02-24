@@ -121,19 +121,86 @@ namespace MONOPOLY
 
 
 
-            //mirar decorador
-            //mirar mortagage de servicios
+            //TODO: mirar decorador
+            //TODO: mirar mortagage de servicios
+        }
+
+        public void Draw(AbstractSquare[] board)
+        {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("             ");
+            Console.WriteLine("   Tablero   ");
+            Console.WriteLine("             ");
+
+            config.init();
+
+            drawFirstLine(board);
 
 
 
+            Console.ReadKey(true);
+        }
 
 
-            
+        private void drawFirstLine(AbstractSquare[] board)
+        {
+            Console.SetCursorPosition(Console.WindowWidth / 4, 5);
+
+            for (int position = 20; position < 31; position++)
+            {
+                EvalutateAbstractSquare(board[position]);
+            }
+        }
+
+        private void drawcenter(AbstractSquare[] board)
+        {
+
+        }
 
 
+        private void EvalutateAbstractSquare(AbstractSquare square)
+        {
+            if (square is PropertySquare)
+            {
+                Console.BackgroundColor = ((PropertySquare)square).COLOR_PROPERTY;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write(" " + ((PropertySquare)square).POSITION + " ");
+            }
+            else if (square is ServicesSquare  && (square.POSITION==5 || square.POSITION == 15|| square.POSITION == 25|| square.POSITION ==35))
+            {
 
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" " + square.POSITION + " ");
 
+            }
+            else if (square is ServicesSquare)
+            {
 
+                Console.BackgroundColor = ConsoleColor.DarkCyan;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" " + square.POSITION + " ");
+
+            }
+            else if (square is CardSquare && ((CardSquare)square).typeofCard==TypeofCard.Community)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" " + square.POSITION + " ");
+            }
+            else if (square is CardSquare && ((CardSquare)square).typeofCard == TypeofCard.Chance)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" " + square.POSITION + " ");
+            }
+            else 
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write(" " + square.POSITION + " ");
+            }
         }
 
     }

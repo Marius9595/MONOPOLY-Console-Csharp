@@ -48,7 +48,7 @@ namespace MONOPOLY
         {
 
             if (situation == TitleDeedSituation.Free) return $"You are in {name}, it is {situation} and costs {buying_cost}";
-            else return $"you are in a station that belongs to {owner} and if you are not him, you have to pay him {paymenttoOwner}";
+            else return $"you are in a station that belongs to {owner.NAME} and if you are not him, you have to pay him {paymenttoOwner}";
 
         }
     }
