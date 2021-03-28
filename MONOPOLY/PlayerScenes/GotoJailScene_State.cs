@@ -27,7 +27,7 @@ namespace MONOPOLY
 
             Console.WindowHeight = 25;
             Console.WindowWidth = 70;
-            String File = @"C:\Users\Mario\Desktop\PROYECTO C#\MONOPOLY\messagegotojail.txt";
+            String File = @"archives\messagegotojail.txt";
 
             String line;
             int counter = 0;
@@ -48,7 +48,7 @@ namespace MONOPOLY
         {
             Console.WindowHeight = 60;
             Console.WindowWidth = 70;
-            String File = @"C:\Users\Mario\Desktop\PROYECTO C#\MONOPOLY\gotojail.txt";
+            String File = @"archives\gotojail.txt";
 
             String line;
             int counter = 0;

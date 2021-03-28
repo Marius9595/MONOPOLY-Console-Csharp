@@ -26,7 +26,7 @@ namespace MONOPOLY
 
             int answer = 0;
             Console.WriteLine("\nPlease Make a Selection :\n");
-            Console.WriteLine("0 : Game Status");
+            Console.WriteLine("0 : To look Board");
             Console.WriteLine("1 : Finish Turn");
             Console.WriteLine("2 : Your DashBoard");
             Console.WriteLine("3 : Purchase the property");
@@ -74,6 +74,11 @@ namespace MONOPOLY
                 case 7:
                     player.CURRENTMONEY = 0;
                     player.Loser = true;
+                    break;
+                default:
+                    Console.WriteLine("Incorrect Option, press any key and try again");
+                    Console.ReadKey();
+                    Draw(player, board, Theboard);
                     break;
             }
         }

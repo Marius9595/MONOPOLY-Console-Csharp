@@ -98,7 +98,7 @@ namespace MONOPOLY
         void header()
         {
 
-            String File = @"C:\Users\Mario\Desktop\PROYECTO C#\MONOPOLY\monopoly.txt";
+            String File = @"archives/monopoly.txt";
 
             String line;
             int counter = 0;

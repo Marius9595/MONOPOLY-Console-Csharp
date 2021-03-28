@@ -13,7 +13,7 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>ABACAAAECAAAAAAAQAQBAEAEAAAAAAAAAKAAAAAAAAA=</HashCode>
+      <HashCode>ABASAAAECAAAAAAAQAQBAFAMAAEAAAAAAOAAAAEAAAA=</HashCode>
       <FileName>Squares\CardSquare.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -34,7 +34,7 @@
   <Class Name="MONOPOLY.PropertySquare" Collapsed="true">
     <Position X="17.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAYAAAAQAAAkBAAAIABBAAAIAAMAACAAIAAIAAAIEA=</HashCode>
+      <HashCode>AAAYAAAAQAAAkBAAAIABBAAAIAAMAAKAAIAAIAAAIEA=</HashCode>
       <FileName>Squares\PropertySquare.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="1.188" />
@@ -42,7 +42,7 @@
   <Class Name="MONOPOLY.ServicesSquare" Collapsed="true">
     <Position X="16" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAYAAAAQAAAgBAAAIABBAAAIAAEAAAAAIAAIAAAAEA=</HashCode>
+      <HashCode>AAAYAAAAQAAAgBAAAIABBAAAIAAEAAIAAIAAIAAAAEA=</HashCode>
       <FileName>Squares\ServicesSquare.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.21" />
@@ -114,7 +114,7 @@
   <Class Name="MONOPOLY.Board" Collapsed="true">
     <Position X="11" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAYgAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAABgAAAAAAAAAAAABQAAAAYgAAAAQEAAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -122,9 +122,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="MONOPOLY.Player" Collapsed="true">
-    <Position X="17.75" Y="2.5" Width="1.5" />
+    <Position X="16.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAkAAAABACKAAAQAAAAQABAAAGAACEAALAAAIAAEA=</HashCode>
+      <HashCode>BAIAkAQAABACKAAAQAAABQEBAAAGAACEAALAAAoAAEQ=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -132,7 +132,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Interface Name="MONOPOLY.IAbstractProperty" Collapsed="true">
-    <Position X="19.5" Y="5.25" Width="1.5" />
+    <Position X="20.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces for properties\IAbstractProperty.cs</FileName>
@@ -141,7 +141,7 @@
   <Interface Name="MONOPOLY.IAbstractTitleDeed" Collapsed="true">
     <Position X="16.5" Y="4.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAABAAAIAAAAAAIAAAAAAAAAAAIAAAAEA=</HashCode>
+      <HashCode>AAAQAAAAAAAAABAAAIAAAAAAIAAAAAIAAAAAIAAAAEA=</HashCode>
       <FileName>Interfaces for properties\IAbstractTitleDeed.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -167,7 +167,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="MONOPOLY.TitleDeedSituation" Collapsed="true">
-    <Position X="16.75" Y="5.25" Width="1.5" />
+    <Position X="19.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAI=</HashCode>
       <FileName>Interfaces for properties\IAbstractTitleDeed.cs</FileName>

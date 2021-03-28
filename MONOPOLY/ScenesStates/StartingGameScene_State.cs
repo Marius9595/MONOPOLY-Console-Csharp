@@ -35,7 +35,7 @@ namespace MONOPOLY
 
             void Message()
             {
-                String File = @"C:\Users\Mario\Desktop\PROYECTO C#\MONOPOLY\starting_soon.txt";
+                String File = @"archives\starting_soon.txt";
 
                 String line;
                 int counter = 0;
